@@ -1,0 +1,48 @@
+{
+  "name": "hahow-recruitment",
+  "version": "0.1.0",
+  "description": "Mini project for Hahow recruitment",
+  "main": "index.js",
+  "repository": "https://github.com/weihanglo/hahow-recruitment",
+  "author": "Weihang Lo <weihanglotw@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=production webpack -p --progress",
+    "lint": "eslint .",
+    "precommit": "npm run lint",
+    "start": "NODE_ENV=development webpack-dev-server -d --hot",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "redux": "^3.7.2",
+    "redux-observable": "^0.17.0",
+    "rxjs": "^5.5.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
+    "@babel/preset-react": "^7.0.0-beta.37",
+    "@babel/preset-stage-2": "^7.0.0-beta.37",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^8.0.0-beta.0",
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.14.3",
+    "jest": "^22.1.1",
+    "react-dom": "^16.2.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0"
+  }
+}
