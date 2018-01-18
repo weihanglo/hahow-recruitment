@@ -5,14 +5,24 @@ import AbilityCounter from './AbilityCounter'
 
 export default class Profile extends React.Component {
   static propTypes = {
-    abilities: PropTypes.array.isRequired
+    abilities: PropTypes.object.isRequired,
+    fetching: PropTypes.bool
   }
 
   render () {
     const { abilities } = this.props
     return (
       <div>
-        {abilities.map(ability => <AbilityCounter {...ability} />)}
+        {Object
+          .entries(abilities)
+          .map(([name, value]) =>
+            <AbilityCounter
+              key={name}
+              name={name}
+              value={value}
+            />
+          )
+        }
       </div>
     )
   }

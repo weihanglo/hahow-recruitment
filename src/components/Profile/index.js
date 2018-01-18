@@ -4,7 +4,8 @@ import Profile from './Profile'
 
 function mapStateToProps ({ abilities }) {
   return {
-    abilities
+    abilities: abilities.abilities,
+    fetching: abilities.fetching
   }
 }
 

@@ -6,15 +6,15 @@ import PropTypes from 'prop-types'
  */
 export default class AbilityCounter extends React.PureComponent {
   static propTypes = {
-    abilityName: PropTypes.string.isRequired,
-    value: PropTypes.object.isRequired
+    name: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired
   }
 
   render () {
-    const { abilityName, value } = this.props
+    const { name, value } = this.props
     return (
       <div>
-        <span>{abilityName}</span>
+        <span>{name}</span>
         <button>+</button>
         <span>{value}</span>
         <button>-</button>
