@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 /**
- * Counter to increase/decrease a specific ability of a hero.
+ * Counter to increase/decrease a specific ability of a profile.
  */
-export default class AbilityCounter extends React.PureComponent {
+export default class Counter extends React.PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     value: PropTypes.number.isRequired

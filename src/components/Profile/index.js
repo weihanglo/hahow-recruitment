@@ -2,10 +2,10 @@ import { connect } from 'react-redux'
 
 import Profile from './Profile'
 
-function mapStateToProps ({ abilities }) {
+function mapStateToProps ({ profile }) {
   return {
-    abilities: abilities.abilities,
-    fetching: abilities.fetching
+    profile: profile.profile,
+    fetching: profile.fetching
   }
 }
 

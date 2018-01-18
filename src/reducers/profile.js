@@ -12,10 +12,10 @@ const profileUrl = id =>
 const initialState = {
   id: null,
   fetching: false,
-  abilities: {}
+  profile: {}
 }
 
-export default function abilities (state = initialState, action) {
+export default function profile (state = initialState, action) {
   switch (action.type) {
     case FETCH_PROFILE:
       return {
@@ -27,21 +27,21 @@ export default function abilities (state = initialState, action) {
       return {
         ...state,
         fetching: false,
-        abilities: action.abilities
+        profile: action.profile
       }
     case FETCH_PROFILE_FAILURE:
       return {
         id: null,
         fetching: false,
-        abilities: []
+        profile: {}
       }
     default:
       return state
   }
 }
 
-export const abilitiesEpic = action$ => action$
+export const profileEpic = action$ => action$
   .ofType(FETCH_PROFILE)
   .mergeMap(action => ajax({ url: profileUrl(action.id), crossDomain: true }))
-  .map(({ response }) => ({ type: FETCH_PROFILE_SUCCESS, abilities: response }))
+  .map(({ response }) => ({ type: FETCH_PROFILE_SUCCESS, profile: response }))
   .catch(error => ({ type: FETCH_PROFILE_FAILURE, error }))

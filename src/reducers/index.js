@@ -1,15 +1,15 @@
 import { combineEpics } from 'redux-observable'
 import { combineReducers } from 'redux'
 
-import abilities, { abilitiesEpic } from './abilities'
+import profile, { profileEpic } from './profile'
 import heroes, { heroesEpic } from './heroes'
 
 export const rootEpic = combineEpics(
-  abilitiesEpic,
+  profileEpic,
   heroesEpic
 )
 
 export const rootReducer = combineReducers({
-  abilities,
+  profile,
   heroes
 })

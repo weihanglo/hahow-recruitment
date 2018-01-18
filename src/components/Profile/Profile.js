@@ -1,22 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import AbilityCounter from './AbilityCounter'
+import Counter from './Counter'
 
 export default class Profile extends React.Component {
   static propTypes = {
-    abilities: PropTypes.object.isRequired,
+    profile: PropTypes.object.isRequired,
     fetching: PropTypes.bool
   }
 
   render () {
-    const { abilities } = this.props
+    const { profile } = this.props
     return (
       <div>
         {Object
-          .entries(abilities)
+          .entries(profile)
           .map(([name, value]) =>
-            <AbilityCounter
+            <Counter
               key={name}
               name={name}
               value={value}
