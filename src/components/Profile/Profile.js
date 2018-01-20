@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import UploadButton from './UploadButton'
 import Counter from './Counter'
 
 export default class Profile extends React.Component {
@@ -45,10 +46,7 @@ export default class Profile extends React.Component {
         <div>
           {this._renderCounters()}
         </div>
-        <div>
-          <p>剩餘點數：{availablePoints}</p>
-          <button>儲存</button>
-        </div>
+        <UploadButton />
       </div>
     )
   }

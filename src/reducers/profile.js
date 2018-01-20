@@ -89,6 +89,11 @@ export const getAvailablePoints = ({ profile }) => profile.availablePoints
 export const getProfile = ({ profile }) => profile.profile
 
 /**
+ * Select current hero ID.
+ */
+export const getHeroId = ({ profile }) => profile.id
+
+/**
  * Determine increase/decrese counter enabled state of current profile.
  */
 export const getCounterEnabled = createSelector(
