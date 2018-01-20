@@ -2,7 +2,9 @@
 
 ## Git Work Flow
 
-Kinda [GitHub Flow](https://guides.github.com/introduction/flow/).
+[~~GitHub Flow~~][github-flow] One master branch to rule them all.
+
+[github-flow]: https://guides.github.com/introduction/flow/
 
 ## Commit Messages
 
@@ -12,18 +14,17 @@ There are several types of commit message. All commit messages must be prefixed 
 - `[bugfix]`: Fix some bugs.
 - `[build]`: Tune some build script or configuration.
 - `[test]`: Add new tests.
+- `[refactor]`: Do a refactor.
 - `[doc]`: Update documentation.
 
 An example message should look as following:
 
-```
+```bash
 [bugfix] apply flexbox compatiable CSS for IE 11
 
 The flexbox implementation in IE 11 follows the old spec. We figure out some
 hack to fix the layout issue. Here is current approach:
 
-...
-...
-...
-```
+# ... other information in this commit
 
+```

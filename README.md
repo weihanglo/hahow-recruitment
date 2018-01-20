@@ -17,7 +17,7 @@ To run this project website locally,
 2. Make sure that `localhost:8080` port is available (not bebind firewall or in use).
 3. Run `yarn start`. It would launch the web app with your default browser.
 
-All-in-one command:
+All commands you need:
 
 ```bash
 git clone https://github.com/weihanglo/hahow-recruitment.git
@@ -27,10 +27,10 @@ yarn start
 # open localhost:8080
 ```
 
-## 🏠 Project Infomation
+## 🏠 Project Information
 
 - **Platform**: compatible with IE 11 and iOS Safari 9
-- **UI Framework**: [React][react]
+- **UI Framework**: [React][react] bound with [React-Redux][react-redux]
 - **State Management**: [Redux][redux] + [Redux-Observable][redux-observable]
 - **Language**: ECMAScript 6+ transpiled by [Babel 7][babel]
 - **Coding Style**: [Standard][standardjs] (with [ESLint][eslint])
@@ -60,6 +60,7 @@ Copyright © 2018 Weihang Lo
 [jest]: https://facebook.github.io/jest/
 [nodejs]: https://nodejs.org/
 [npm]: https://www.npmjs.com/
+[react-redux]: https://github.com/reactjs/react-redux
 [react]: https://facebook.github.io/react/
 [redux-observable]: https://redux-observable.js.org/
 [redux]: http://redux.js.org/
