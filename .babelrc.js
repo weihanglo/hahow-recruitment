@@ -6,7 +6,8 @@ module.exports = {
           'ie 11',
           'safari >= 9'
         ]
-      }
+      },
+      module: false
     }],
     '@babel/preset-stage-2',
     "@babel/preset-react"

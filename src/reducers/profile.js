@@ -11,7 +11,7 @@ import {
   INCREASE_ABILITY
 } from '../actions/updateProfile'
 
-const PROFILE_URL = id =>
+const profileUrl = id =>
   `http://hahow-recruit.herokuapp.com/heroes/${id}/profile`
 
 const initialState = {
@@ -121,6 +121,6 @@ export const getCounterEnabled = createSelector(
  */
 export const profileEpic = action$ => action$
   .ofType(FETCH_PROFILE)
-  .mergeMap(action => ajax({ url: PROFILE_URL(action.id), crossDomain: true }))
+  .mergeMap(action => ajax({ url: profileUrl(action.id), crossDomain: true }))
   .map(({ response }) => ({ type: FETCH_PROFILE_SUCCESS, profile: response }))
   .catch(error => ({ type: FETCH_PROFILE_FAILURE, error }))
