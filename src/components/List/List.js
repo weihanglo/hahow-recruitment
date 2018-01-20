@@ -5,11 +5,11 @@ import Card from './Card'
 
 export default class List extends React.PureComponent {
   static propTypes = {
-    currentId: PropTypes.number,
+    currentId: PropTypes.string,
     fetchHeroes: PropTypes.func.isRequired,
-    fetchProfile: PropTypes.func.isRequired,
     fetching: PropTypes.bool,
-    heroes: PropTypes.array.isRequired
+    heroes: PropTypes.array.isRequired,
+    onClickHero: PropTypes.func.isRequired
   }
 
   componentDidMount () {
@@ -17,15 +17,19 @@ export default class List extends React.PureComponent {
   }
 
   render () {
-    const { currentId, heroes, fetchProfile } = this.props
-    return heroes.map((hero, index) =>
-      <Card
-        key={hero.id}
-        image={hero.image}
-        name={hero.name}
-        selected={currentId === hero.id}
-        onClick={() => fetchProfile(hero.id)}
-      />
+    const { currentId, heroes, onClickHero } = this.props
+    return (
+      <div>
+        {heroes.map(({ image, name, id }) =>
+          <Card
+            key={id}
+            image={image}
+            name={name}
+            selected={currentId === id}
+            onClick={() => { currentId !== id && onClickHero(id) }}
+          />
+        )}
+      </div>
     )
   }
 }

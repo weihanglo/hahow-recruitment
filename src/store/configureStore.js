@@ -4,8 +4,12 @@ import {
   createStore
 } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
+import createHistory from 'history/createBrowserHistory'
+import { routerMiddleware } from 'react-router-redux'
 
 import { rootEpic, rootReducer } from '../reducers'
+
+export const history = createHistory()
 
 export default function configureStore (preloadState) {
   // Enable Redux devtools addon/extension.
@@ -14,7 +18,7 @@ export default function configureStore (preloadState) {
     : compose
 
   const epicMiddleware = createEpicMiddleware(rootEpic)
-  const middlewares = [epicMiddleware]
+  const middlewares = [epicMiddleware, routerMiddleware(history)]
 
   return createStore(
     rootReducer,

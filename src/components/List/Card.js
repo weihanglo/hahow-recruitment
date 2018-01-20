@@ -5,16 +5,16 @@ export default class Card extends React.PureComponent {
   static propTypes = {
     image: PropTypes.string,
     name: PropTypes.string,
-    onClick: PropTypes.func,
-    selected: PropTypes.bool.isRequired
+    selected: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired
   }
 
   render () {
-    const { image, name, selected, onClick } = this.props
+    const { image, name, onClick } = this.props
     return (
       <div onClick={onClick}>
         <img src={image} />
-        {selected ? <h1>{name}</h1> : <h4>{name}</h4>}
+        <h4>{name}</h4>
       </div>
     )
   }

@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve('dist'),
-    filename: '[name].js'
+    filename: isProd ? '[name].[chunkhash:10].js' : '[name].js'
   },
   module: {
     rules: [
@@ -31,5 +31,18 @@ module.exports = {
       }
     })
   ],
+  devServer: {
+    historyApiFallback: true,
+    proxy: {
+      '/heroes/**/*.js': {
+        target: 'http://0.0.0.0:8080',
+        pathRewrite: { '^/heroes': '' }
+      },
+      '/heroes/**/*.css': {
+        target: 'http://0.0.0.0:8080',
+        pathRewrite: { '^/heroes': '' }
+      }
+    }
+  },
   devtool: isProd ? 'source-map' : 'inline-source-map'
 }

@@ -54,7 +54,10 @@ export default function profile (state = initialState, action) {
         profile: action.profile
       }
     case FETCH_PROFILE_FAILURE:
-      return initialState
+      return {
+        ...state,
+        fetching: false
+      }
     case INCREASE_ABILITY:
       return {
         ...state,

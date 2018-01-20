@@ -15,10 +15,12 @@
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
+    "history": "^4.7.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-redux": "^5.0.6",
-    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
     "redux": "^3.7.2",
     "redux-observable": "^0.17.0",
     "reselect": "^3.0.1",

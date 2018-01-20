@@ -6,7 +6,6 @@ import Counter from './Counter'
 
 export default class Profile extends React.Component {
   static propTypes = {
-    availablePoints: PropTypes.number.isRequired,
     fetching: PropTypes.bool,
     counterEnabled: PropTypes.objectOf(PropTypes.object),
     onDecrease: PropTypes.func.isRequired,
@@ -36,7 +35,8 @@ export default class Profile extends React.Component {
   }
 
   render () {
-    const { profile, availablePoints } = this.props
+    const { profile } = this.props
+
     if (!profile) {
       return null
     }
