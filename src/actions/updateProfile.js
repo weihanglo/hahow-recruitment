@@ -1,10 +1,12 @@
-export const UPDATE_PROFILE = 'UPDATE_PROFILE'
-export const UPDATE_PROFILE_SUCCESS = 'UPDATE_PROFILE_SUCCESS'
-export const UPDATE_PROFILE_FAILURE = 'UPDATE_PROFILE_FAILURE'
+export const INCREASE_ABILITY = 'INCREASE_ABILITY'
+export const DECREASE_ABILITY = 'DECREASE_ABILITY'
 
-export function updateProfile (profile) {
-  return {
-    type: UPDATE_PROFILE,
-    profile
-  }
-}
+export const increaseAbility = name => ({
+  type: INCREASE_ABILITY,
+  name
+})
+
+export const decreaseAbility = name => ({
+  type: DECREASE_ABILITY,
+  name
+})
