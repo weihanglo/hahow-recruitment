@@ -1,10 +1,11 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   entry: {
-    reader: path.resolve('src', 'index.js')
+    main: path.resolve('src', 'index.js')
   },
   output: {
     path: path.resolve('dist'),
@@ -27,6 +28,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.EnvironmentPlugin({
+      BASENAME: '/hahow-recruitment'
+    }),
     new HtmlWebpackPlugin({
       title: 'Hahow Recruitment',
       filename: path.resolve('dist', 'index.html'),

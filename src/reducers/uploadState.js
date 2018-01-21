@@ -8,7 +8,7 @@ import {
 import { getHeroId, getProfile } from './profile'
 
 const profileUrl = id =>
-  `http://hahow-recruit.herokuapp.com/heroes/${id}/profile`
+  `https://hahow-recruit.herokuapp.com/heroes/${id}/profile`
 
 export default function uploadState (state = { uploading: false }, action) {
   switch (action.type) {

@@ -15,7 +15,7 @@ import {
 } from '../actions/updateProfile'
 
 const profileUrl = id =>
-  `http://hahow-recruit.herokuapp.com/heroes/${id}/profile`
+  `https://hahow-recruit.herokuapp.com/heroes/${id}/profile`
 
 const initialState = {
   id: null,

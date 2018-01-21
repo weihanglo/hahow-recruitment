@@ -9,7 +9,10 @@ import { routerMiddleware } from 'react-router-redux'
 
 import { rootEpic, rootReducer } from '../reducers'
 
-export const history = createHistory()
+const basename = process.env.BASENAME
+
+console.log('----------\n\n\n\n', basename)
+export const history = createHistory({ basename })
 
 export default function configureStore (preloadState) {
   // Enable Redux devtools addon/extension.
