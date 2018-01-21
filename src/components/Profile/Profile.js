@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Spinner } from '@blueprintjs/core'
 
 import UploadButton from './UploadButton'
 import Counter from './Counter'
+import './style.css'
 
 export default class Profile extends React.Component {
   static propTypes = {
@@ -35,14 +37,18 @@ export default class Profile extends React.Component {
   }
 
   render () {
-    const { profile } = this.props
-
-    if (!profile) {
-      return null
+    if (this.props.fetching) {
+      return (
+        <div className='profile__container'>
+          <div style={{ width: '2.5em', height: '2.5em' }}>
+            <Spinner intent='primary' />
+          </div>
+        </div>
+      )
     }
 
     return (
-      <div>
+      <div className='profile__container'>
         <div>
           {this._renderCounters()}
         </div>

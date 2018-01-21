@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Button } from '@blueprintjs/core'
 
 /**
  * Counter to increase/decrease a specific ability of a profile.
@@ -22,15 +23,21 @@ export default class Counter extends React.PureComponent {
       value
     } = this.props
     return (
-      <div>
+      <div className='profile__counter'>
         <span>{name}</span>
-        <button onClick={onIncrease} disabled={!canIncrease}>
-          +
-        </button>
-        <span>{value}</span>
-        <button onClick={onDecrease} disabled={!canDecrease}>
-          -
-        </button>
+        <span>
+          <Button
+            onClick={onIncrease}
+            disabled={!canIncrease}
+            iconName='plus'
+          />
+          <span className='profile__value'>{value}</span>
+          <Button
+            onClick={onDecrease}
+            disabled={!canDecrease}
+            iconName='minus'
+          />
+        </span>
       </div>
     )
   }

@@ -1,0 +1,21 @@
+.upload-button__container {
+  position: relative;
+}
+
+.upload-button__save-group {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.3em 0;
+}
+
+@media (max-width: 720px) {
+  .upload-button__save-group {
+    position: relative;
+  }
+}
+
+
+.upload-button__save-group > button {
+  width: 100%;
+}

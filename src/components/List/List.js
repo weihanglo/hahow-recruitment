@@ -2,12 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Card from './Card'
+import './style.css'
 
 export default class List extends React.PureComponent {
   static propTypes = {
     currentId: PropTypes.string,
     fetchHeroes: PropTypes.func.isRequired,
-    fetching: PropTypes.bool,
     heroes: PropTypes.array.isRequired,
     onClickHero: PropTypes.func.isRequired
   }
@@ -19,7 +19,7 @@ export default class List extends React.PureComponent {
   render () {
     const { currentId, heroes, onClickHero } = this.props
     return (
-      <div>
+      <div className='hero-list__container'>
         {heroes.map(({ image, name, id }) =>
           <Card
             key={id}

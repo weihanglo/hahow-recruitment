@@ -1,0 +1,49 @@
+.hero-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.hero-list__card-container {
+  flex-basis: 25%;
+  min-height: 10em;
+  padding: 1em;
+  min-width: 5em;
+}
+
+@media (min-width: 480px) and (max-width: 720px) {
+  .hero-list__card-container {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-list__card-container {
+    flex-basis: 100%;
+  }
+}
+
+.hero-list__card {
+  min-height: 10em;
+  position: relative;
+  text-align: center;
+  top: 0;
+  transition: top 250ms;
+}
+
+.hero-list__card--selected {
+  top: 1em;
+  transition: top 250ms;
+}
+
+.hero-list__card > img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 0.5em;
+  border-radius: 0.5em;
+}
+
+.hero-list__card > h4 {
+  margin: 2em auto;
+  white-space: nowrap;
+}

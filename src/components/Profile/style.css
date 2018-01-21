@@ -1,0 +1,39 @@
+.profile__container {
+  display: flex;
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.profile__container > * {
+  flex: 100%;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 720px) {
+  .profile__container {
+    display: block;
+    font-size: 1em;
+  }
+}
+
+.profile__counter {
+  padding: 0.3em 0;
+}
+
+.profile__counter > :first-child {
+  width: 35%;
+  display: inline-block;
+}
+
+.profile__counter > :last-child {
+  min-width: 50%;
+  display: inline-block;
+  text-align: right
+}
+
+.profile__value {
+  display: inline-block;
+  max-width: 60%;
+  text-align: center;
+  width: 30%;
+}
