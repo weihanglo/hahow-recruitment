@@ -1,7 +1,10 @@
 import { createSelector } from 'reselect'
 import { ajax } from 'rxjs/observable/dom/ajax'
+import { combineEpics } from 'redux-observable'
+import { push } from 'react-router-redux'
 
 import {
+  CLEAR_PROFILE,
   FETCH_PROFILE,
   FETCH_PROFILE_SUCCESS,
   FETCH_PROFILE_FAILURE
@@ -40,6 +43,9 @@ const profileReducer = (state, action) => {
 
 export default function profile (state = initialState, action) {
   switch (action.type) {
+    case CLEAR_PROFILE: {
+      return initialState
+    }
     case FETCH_PROFILE:
       return {
         profile: null,
@@ -122,8 +128,17 @@ export const getCounterEnabled = createSelector(
 /**
  * A redux-observable epic that sends GET request to get a heor's profile.
  */
-export const profileEpic = action$ => action$
+const fetchEpic = action$ => action$
   .ofType(FETCH_PROFILE)
   .mergeMap(action => ajax({ url: profileUrl(action.id), crossDomain: true }))
   .map(({ response }) => ({ type: FETCH_PROFILE_SUCCESS, profile: response }))
   .catch(error => ({ type: FETCH_PROFILE_FAILURE, error }))
+
+const clearEpic = action$ => action$
+  .ofType(CLEAR_PROFILE)
+  .mapTo(push('/heroes'))
+
+export const profileEpic = combineEpics(
+  fetchEpic,
+  clearEpic
+)

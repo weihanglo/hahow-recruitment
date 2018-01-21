@@ -11,5 +11,5 @@ export default router
 export const routerEpic = (action$, store) => action$
   .ofType(LOCATION_CHANGE)
   .map(({ payload }) => payload.pathname.split('/')[2])
-  .filter(id => !isNaN(id) && getHeroId(store.getState()) !== id)
+  .filter(id => !isNaN(parseInt(id)) && getHeroId(store.getState()) !== id)
   .map(fetchProfile)

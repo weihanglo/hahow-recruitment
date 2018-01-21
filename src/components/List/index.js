@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 
 import { fetchHeroes } from '../../actions/fetchHeroes'
-import { fetchProfile } from '../../actions/fetchProfile'
+import { clearProfile, fetchProfile } from '../../actions/fetchProfile'
 import { getHeroId } from '../../reducers/profile'
 
 import List from './List'
@@ -18,6 +18,7 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return bindActionCreators({
+    clearProfile,
     fetchProfile,
     fetchHeroes,
     onClickHero: heroId => push(`/heroes/${heroId}`)

@@ -9,7 +9,8 @@ export default class List extends React.PureComponent {
     currentId: PropTypes.string,
     fetchHeroes: PropTypes.func.isRequired,
     heroes: PropTypes.array.isRequired,
-    onClickHero: PropTypes.func.isRequired
+    onClickHero: PropTypes.func.isRequired,
+    clearProfile: PropTypes.func.isRequired
   }
 
   componentDidMount () {
@@ -17,7 +18,7 @@ export default class List extends React.PureComponent {
   }
 
   render () {
-    const { currentId, heroes, onClickHero } = this.props
+    const { currentId, heroes, onClickHero, clearProfile } = this.props
     return (
       <div className='hero-list__container'>
         {heroes.map(({ image, name, id }) =>
@@ -26,7 +27,11 @@ export default class List extends React.PureComponent {
             image={image}
             name={name}
             selected={currentId === id}
-            onClick={() => { currentId !== id && onClickHero(id) }}
+            onClick={() => {
+              currentId !== id
+                ? onClickHero(id)
+                : clearProfile()
+            }}
           />
         )}
       </div>
