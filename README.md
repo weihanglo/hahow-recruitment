@@ -1,6 +1,6 @@
 # Hahow Recruitment Mini Project
 
-This project is for Hahow recruitment only.
+This project is for Hahow recruitment only. Feel free to watch [the demo site](https://weihanglo.tw/hahow-recruiment).
 
 ## 🍛 Requirements
 
@@ -29,24 +29,29 @@ yarn start
 
 ## 🏠 Project Information
 
-- **Platform**: compatible with IE 11 and iOS Safari 9
+- **Platform**: compatible with **IE 11** and **iOS Safari 9**
 - **UI Framework**: [React][react] bound with [React-Redux][react-redux]
 - **State Management**: [Redux][redux] + [Redux-Observable][redux-observable]
 - **Language**: ECMAScript 6+ transpiled by [Babel 7][babel]
 - **Coding Style**: [Standard][standardjs] (with [ESLint][eslint])
 - **Bundler**: [Webpack][webpack]
 - **Git Hoosk**: [Husky][husky]
+- **CSS Framework**: [Blueprint][blueprint]
 - **Test Framework**: [Jest][jest]
 
 ## 📚 Documentation
 
 **Project Architecture**
 
-See [Architecture](docs/architecture.md) in `docs/` directory.
+See [the app architecture](docs/architecture.md) in `docs/` directory.
 
 **Contributing**
 
-See [Contributing](docs/CONTRIBUTING.md) in `docs/` directory.
+See [contributing guideline](docs/CONTRIBUTING.md) in `docs/` directory.
+
+**Issues and Notes**
+
+See some [issues and notes](docs/issues-and-notes.md) in `docs/` directory.
 
 ## 🎫 License
 
@@ -68,3 +73,4 @@ Copyright © 2018 Weihang Lo
 [vimrc]: https://github.com/weihanglo/dotfiles/blob/master/.config/nvim/init.vim
 [webpack]: https://webpack.js.org/
 [yarn]: https://yarnpkg.com/
+[blueprint]: http://blueprintjs.com/
