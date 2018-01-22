@@ -11,7 +11,6 @@ import { rootEpic, rootReducer } from '../reducers'
 
 const basename = process.env.BASENAME
 
-console.log('----------\n\n\n\n', basename)
 export const history = createHistory({ basename })
 
 export default function configureStore (preloadState) {
