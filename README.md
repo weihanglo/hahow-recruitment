@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Travis](https://img.shields.io/travis/weihanglo/hahow-recruitment.svg)](https://travis-ci.org/weihanglo/hahow-recruitment)
 
-This project is for Hahow recruitment only. Feel free to watch [the demo site](https://weihanglo.tw/hahow-recruiment).
+This project is for Hahow recruitment only. Feel free to watch [the demo site](https://weihanglo.tw/hahow-recruitment).
 
 ## 🍛 Requirements
 
@@ -10,7 +10,7 @@ This project is for Hahow recruitment only. Feel free to watch [the demo site](h
 - [Node.js][nodejs] 8+ with [yarn][yarn] 1.3+.
 - A [fine-tuned editor][vimrc].
 
-## 🚀 Quick start
+## 🚀 Quick Start
 
 To run this project website locally,
 
