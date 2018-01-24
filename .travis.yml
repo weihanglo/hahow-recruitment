@@ -8,7 +8,7 @@ cache:
 before_script:
   - rm -rf dist
 script:
-  - yarn build
+  - BASENAME= yarn build
 
 deploy:
   local-dir: dist
