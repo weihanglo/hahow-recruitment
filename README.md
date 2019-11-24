@@ -1,6 +1,8 @@
 # Hahow Recruitment Mini Project
 
-[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Travis](https://img.shields.io/travis/weihanglo/hahow-recruitment.svg)](https://travis-ci.org/weihanglo/hahow-recruitment)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) 
+[![CI Status](https://github.com/weihanglo/hahow-recruitment/workflows/CD/badge.svg)](https://github.com/weihanglo/hahow-recruitment/actions?query=workflow%3ACD)
 
 This project is for Hahow recruitment only. Feel free to watch [the demo site](https://weihanglo.tw/hahow-recruitment).
 
