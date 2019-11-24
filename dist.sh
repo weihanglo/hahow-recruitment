@@ -23,5 +23,5 @@ yarn build
 
 echo "Updating gh-pages branch"
 cd dist && git add --all && \
-    git commit -m "Distrbuting via dist.sh at $(date)" && \
+    git commit -m "Distrbuted via dist.sh at $(date)" && \
     git push
